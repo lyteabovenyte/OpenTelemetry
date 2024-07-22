@@ -1,0 +1,9 @@
+receivers:
+  filelog:
+    include:
+      - /var/log/pods/*/*/*.log
+    exclude:
+      - /var/log/pods/*/otel-collector/*.log
+    start_at: beginning
+    include_file_path: true
+    include_file_name: true
